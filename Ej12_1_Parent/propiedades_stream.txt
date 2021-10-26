@@ -1,0 +1,7 @@
+app.Ej12_Source.spring.cloud.stream.function.bindings.clienteSupplier-out-0=output
+
+app.Ej12_Processor.spring.cloud.stream.function.bindings.mayusculasFunction-in-0=input
+app.Ej12_Processor.spring.cloud.stream.function.bindings.mayusculasFunction-out-0=output
+
+app.Ej12_Sink.spring.cloud.stream.function.bindings.clienteConsumer-in-0=input
+
