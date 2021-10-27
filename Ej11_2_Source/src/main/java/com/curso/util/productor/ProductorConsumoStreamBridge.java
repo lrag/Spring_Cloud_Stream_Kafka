@@ -1,4 +1,4 @@
-package com.curso.productor;
+package com.curso.util.productor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.function.StreamBridge;

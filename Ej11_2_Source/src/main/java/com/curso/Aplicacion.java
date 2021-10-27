@@ -11,16 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.stream.annotation.StreamListener;
 
 import com.curso.modelo.entidad.DetalleConsumo;
-import com.curso.productor.ProductorConsumoStreamBridge;
+import com.curso.util.productor.ProductorConsumoStreamBridge;
 
 @SpringBootApplication
 public class Aplicacion implements CommandLineRunner{
 
-	@Autowired
-	private ProductorConsumoStreamBridge productorConsumo;
-	
 	public static void main(String[] args) {
 		SpringApplication.run(Aplicacion.class, args);
 		
@@ -85,19 +83,7 @@ public class Aplicacion implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		
-		DetalleConsumo dc1 = new DetalleConsumo("CLI-1",100,100);
-		DetalleConsumo dc2 = new DetalleConsumo("CLI-2",200,200);
-		DetalleConsumo dc3 = new DetalleConsumo("CLI-3",300,300);
-		DetalleConsumo dc4 = new DetalleConsumo("CLI-4",400,400);
-		DetalleConsumo dc5 = new DetalleConsumo("CLI-5",500,500);
-		
-		productorConsumo.enviar(dc1);
-		productorConsumo.enviar(dc2);
-		productorConsumo.enviar(dc3);
-		productorConsumo.enviar(dc4);
-		productorConsumo.enviar(dc5);
-		
+	
 	}
 
 }

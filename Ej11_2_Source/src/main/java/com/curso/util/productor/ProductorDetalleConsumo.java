@@ -1,4 +1,4 @@
-package com.curso.productor;
+package com.curso.util.productor;
 
 import java.util.Random;
 import java.util.function.Supplier;

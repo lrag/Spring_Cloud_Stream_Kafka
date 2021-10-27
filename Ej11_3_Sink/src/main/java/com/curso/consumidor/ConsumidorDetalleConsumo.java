@@ -6,12 +6,13 @@ import org.springframework.stereotype.Component;
 
 import com.curso.modelo.entidad.DetalleConsumo;
 
-//@Component
+@Component
 public class ConsumidorDetalleConsumo implements Consumer<DetalleConsumo>{
 
 	@Override
 	public void accept(DetalleConsumo t) {	
-		System.out.println("DetalleConsumo recibido (ConsumidorDetalleConsumo): "+t.getUserId()+","+t.getDuration());		
+		System.out.println("DetalleConsumo recibido (ConsumidorDetalleConsumo): "+t.getUserId()+","+t.getDuration());	
+		
 	}
 	
 }
