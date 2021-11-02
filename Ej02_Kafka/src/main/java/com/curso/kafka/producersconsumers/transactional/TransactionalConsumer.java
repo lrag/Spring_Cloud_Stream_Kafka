@@ -38,8 +38,7 @@ public class TransactionalConsumer {
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
         props.put(ConsumerConfig.ISOLATION_LEVEL_CONFIG, "read_committed");// default "read_uncommitted"
         props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
-        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-        
+        props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");        
         
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
         consumer.subscribe(Collections.singletonList(TransactionalProducer.TOPIC));

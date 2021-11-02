@@ -15,7 +15,7 @@ public class Aplicacion {
 		SpringApplication.run(Aplicacion.class, args);
 	}
 	
-	@Bean
+	//@Bean
 	//spring.cloud.stream.bindings.mayusculasFunction-in-0.destination=topic-clientes
 	//spring.cloud.stream.bindings.mayusculasFunction-out-0.destination=topic-clientesProcesados
 	public Function<Cliente, Cliente> mayusculasFunction(){

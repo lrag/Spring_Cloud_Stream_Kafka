@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 import com.curso.modelo.entidad.Cliente;
 
-//@Component
+@Component
 //spring.cloud.stream.bindings.procesadorClienteMayusculas-in-0.destination=topic-clientes
 //spring.cloud.stream.bindings.psrocesadorClienteMayusculas-out-0.destination=topic-clientesProcesados
 public class ProcesadorClienteMayusculas implements Function<Cliente,Cliente>{
@@ -17,6 +17,7 @@ public class ProcesadorClienteMayusculas implements Function<Cliente,Cliente>{
 		c.setNombre(c.getNombre().toUpperCase());
 		c.setDireccion(c.getDireccion().toUpperCase());
 		c.setTelefono(c.getTelefono().toUpperCase());
+		
 		return c;
 	}
 

@@ -25,7 +25,7 @@ public class TransactionalProducer {
 		properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, PartitionProducer.BROKER_LIST);
 		properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 		properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-		// Configuraci贸n de transacci贸n.
+		// Configuraci髇 de transacci髇.
 		properties.put(ProducerConfig.ACKS_CONFIG, "all");
 		properties.put(ProducerConfig.CLIENT_ID_CONFIG, TransactionalProducer.class.getName()+TOPIC);
 		properties.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, "true");
@@ -36,7 +36,7 @@ public class TransactionalProducer {
 		//properties.put(ProducerConfig.MAX_BLOCK_MS_CONFIG, 600000);
 
 		KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
-		// Notificaci贸n de gesti贸n de transacci贸nes
+		// Notificaci髇 de gesti髇 de transacci髇es
 		producer.initTransactions();
 		
 		Thread thread = new Thread(producer::close);
@@ -47,12 +47,12 @@ public class TransactionalProducer {
 			
 			try {
 				producer.beginTransaction();
-				System.out.println("Inicio de transacci贸n ...");
+				System.out.println("Inicio de transacci髇 ...");
 				//HashMap<TopicPartition,OffsetAndMetadata> partitionsWithOffset = new HashMap<>();
 				for (int j = 0; j < 5; j++) {
 					ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC,
 							CITIES.get(random.nextInt(CITIES.size())), "String " + i++);
-					// Garant铆a s铆ncrona.
+					// Garant韆 s韓crona.
 					producer.send(record).get();
 					//System.out.println("Metadatos recibidos : " + recordMetadata);
 					//partitionsWithOffset.put(new TopicPartition(TOPIC, recordMetadata.partition()), new OffsetAndMetadata(recordMetadata.offset()));
@@ -63,7 +63,7 @@ public class TransactionalProducer {
 				//System.out.println(partitionsWithOffset);
 				//producer.sendOffsetsToTransaction(partitionsWithOffset, "transactionalConsumer"+ TransactionalProducer.TOPIC);
 				producer.commitTransaction();
-				System.out.println("Transacci贸n confirmada!");
+				System.out.println("Transacci髇 confirmada!");
 			} catch (ProducerFencedException e) {
 				producer.abortTransaction();
 			}
