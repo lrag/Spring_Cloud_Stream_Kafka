@@ -13,7 +13,7 @@ public class ProductorPedidos implements Supplier<Pedido>{
 
 	private BlockingQueue<Pedido> cola = new LinkedBlockingQueue<>();
 	
-	public void enviarPedido(Pedido pedido) {	
+	public synchronized void enviarPedido(Pedido pedido) {	
 		cola.offer(pedido);
 	}
 

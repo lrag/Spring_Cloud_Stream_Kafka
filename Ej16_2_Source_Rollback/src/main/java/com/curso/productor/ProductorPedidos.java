@@ -5,6 +5,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.function.Supplier;
 
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.curso.modelo.entidad.Pedido;
 

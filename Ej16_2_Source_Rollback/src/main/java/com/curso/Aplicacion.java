@@ -36,7 +36,7 @@ public class Aplicacion implements CommandLineRunner, ApplicationContextAware{
 		Thread.sleep(2000);
 		System.out.println("==============================");
 		System.out.print("Inicializando");
-		for(int a=0; a<7; a++){
+		for(int a=0; a<5; a++){
 			System.out.print(".");
 			Thread.sleep(1000);
 		}

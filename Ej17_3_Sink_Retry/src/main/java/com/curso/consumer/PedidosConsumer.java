@@ -3,6 +3,7 @@ package com.curso.consumer;
 import java.util.function.Consumer;
 
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import com.curso.modelo.entidad.Pedido;
 
@@ -14,6 +15,7 @@ public class PedidosConsumer implements Consumer<Pedido>{
 	@Override
 	public void accept(Pedido pedido) {
 		
+		
 		/*
 		fallo = !fallo;
 		if(fallo) {
@@ -21,10 +23,14 @@ public class PedidosConsumer implements Consumer<Pedido>{
 			throw new RuntimeException("Fallo al procesar el pedido");
 		}
 		System.out.println("Pedido recibido: "+pedido);
-		*/
-
+		 */
+		
 		System.out.println("FALLO!!! ("+pedido+")");
 		throw new RuntimeException("Fallo al procesar el pedido");
+		
+		//Esta no funciona con spring cloud stream:
+		//TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+		
 		
 	}
 
