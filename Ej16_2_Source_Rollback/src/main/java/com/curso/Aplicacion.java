@@ -13,18 +13,13 @@ import com.curso.modelo.negocio.GestorPedidos;
 
 @SpringBootApplication
 @EnableTransactionManagement
-public class Aplicacion implements CommandLineRunner, ApplicationContextAware{
+public class Aplicacion implements CommandLineRunner{
 
 	@Autowired
 	private GestorPedidos gestorPedidos;
 	
 	@Autowired
 	private ApplicationContext appCtx;
-
-	@Override
-	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-		
-	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(Aplicacion.class, args);

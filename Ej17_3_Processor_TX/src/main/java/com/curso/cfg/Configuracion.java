@@ -1,12 +1,13 @@
 package com.curso.cfg;
 
+import java.util.function.BiConsumer;
+
+import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.cloud.stream.config.ListenerContainerCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.listener.AbstractMessageListenerContainer;
 import org.springframework.kafka.listener.DefaultAfterRollbackProcessor;
-import org.springframework.orm.jpa.JpaTransactionManager;
-import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.util.backoff.FixedBackOff;
 
 @Configuration
@@ -16,7 +17,6 @@ public class Configuracion {
 	public ListenerContainerCustomizer<AbstractMessageListenerContainer<byte[], byte[]>> customizer() {
 		// Disable retry in the AfterRollbackProcessor
 		
-	
 		/*
 		ListenerContainerCustomizer<AbstractMessageListenerContainer<byte[], byte[]>> x = 
 			new ListenerContainerCustomizer<AbstractMessageListenerContainer<byte[], byte[]>>() {
@@ -25,6 +25,8 @@ public class Configuracion {
 				public void configure(AbstractMessageListenerContainer<byte[], byte[]> container, 
 									  String destinationName,
 									  String group) {
+					
+			
 					
 					BiConsumer<ConsumerRecord<byte[], byte[]>, Exception> bc = new BiConsumer<ConsumerRecord<byte[], byte[]>, Exception>() {
 						@Override

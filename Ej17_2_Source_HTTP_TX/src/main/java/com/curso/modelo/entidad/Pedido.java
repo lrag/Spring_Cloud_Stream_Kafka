@@ -1,21 +1,11 @@
 package com.curso.modelo.entidad;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
 public class Pedido {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
 	private Long fecha;
 	private String cliente;
 	private String producto;
 	private Integer cantidad;
-	private String estado;
 
 	public Pedido() {
 		super();
@@ -26,15 +16,7 @@ public class Pedido {
 		this.fecha = System.currentTimeMillis();
 		this.cliente = cliente;
 		this.producto = producto;
-		this.cantidad = cantidad;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
+		this.cantidad = cantidad;		
 	}
 
 	public Long getFecha() {
@@ -68,13 +50,11 @@ public class Pedido {
 	public void setCantidad(Integer cantidad) {
 		this.cantidad = cantidad;
 	}
-
-	public String getEstado() {
-		return estado;
-	}
-
-	public void setEstado(String estado) {
-		this.estado = estado;
+	
+	@Override
+	public String toString() {
+		return "Pedido [fecha=" + fecha + ", cliente=" + cliente + ", producto=" + producto + ", cantidad=" + cantidad
+				+ "]";
 	}
 
 }
