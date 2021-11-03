@@ -50,7 +50,7 @@ public class Configuracion {
 						(record, exception) -> {							
 							System.out.println("Discarding failed record: " + record);
 						},
-						new FixedBackOff(0L, 0)));							
+						new FixedBackOff(0L, 0))); //No queremos retry ni nada porque el rollback lo hemos hecho a posta y el mensaje se ha procesado						
 		
 	}
 

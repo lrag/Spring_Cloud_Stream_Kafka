@@ -30,6 +30,7 @@ public class GestorPedidos {
 	public OrdenCompra aceptarPedido(Pedido pedido) {
 
 		OrdenCompra oc = new OrdenCompra(pedido);
+		//Esto sería una llamada a un api RESt síncrona que estaría publicando un tal 'ServicioClientes'
 		oc.setDatosBancarios("datosBancarios"+System.currentTimeMillis());
 		oc.setTotal((int) Math.round((Math.random()*25))*10);
 		ordenCompraRepo.save(oc);

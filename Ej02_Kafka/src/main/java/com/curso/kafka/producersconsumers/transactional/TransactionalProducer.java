@@ -57,7 +57,6 @@ public class TransactionalProducer {
 					//System.out.println("Metadatos recibidos : " + recordMetadata);
 					//partitionsWithOffset.put(new TopicPartition(TOPIC, recordMetadata.partition()), new OffsetAndMetadata(recordMetadata.offset()));
 					System.out.println("Record : " + record.toString());
-					
 					Thread.sleep(1000);
 				}
 				//System.out.println(partitionsWithOffset);

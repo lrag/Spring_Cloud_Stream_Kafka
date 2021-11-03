@@ -10,7 +10,7 @@ import com.curso.modelo.entidad.OrdenCompra;
 import com.curso.modelo.entidad.Pedido;
 import com.curso.modelo.negocio.GestorPedidos;
 
-//@Component
+@Component
 public class ProcessorPedidos implements Function<Pedido, OrdenCompra>{
 
 	@Autowired

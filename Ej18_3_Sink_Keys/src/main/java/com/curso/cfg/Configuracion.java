@@ -18,7 +18,7 @@ public class Configuracion {
 			System.out.println("==========================================================");
 			System.out.println("Mensaje recibido: ("+environment.getProperty("local.server.port")+") ");
             System.out.println(m.getPayload());
-            //System.out.println(m.getHeaders().entrySet());
+            System.out.println(m.getHeaders().entrySet());
             System.out.println(m.getHeaders().get("kafka_receivedPartitionId"));
 		};
 	}

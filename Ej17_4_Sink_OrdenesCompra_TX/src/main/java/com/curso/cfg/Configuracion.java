@@ -16,12 +16,23 @@ public class Configuracion {
 
 	@Autowired
 	private GestorFacturas gestorFacturas;
-	
+
+	/*
 	@Bean
 	Consumer<Message<OrdenCompra>> pedidosConsumer(Environment environment){	
+		Message<OrdenCompra> x = null;
 		return m -> {
 			System.out.println("Pedido recibido: ("+environment.getProperty("local.server.port")+") "+m.getPayload());
 			gestorFacturas.aceptarPedido(m.getPayload());
+		};
+	}
+	*/
+
+	@Bean
+	Consumer<OrdenCompra> pedidosConsumer_(Environment environment){	
+		return oc -> {
+			System.out.println("Pedido recibido: ("+environment.getProperty("local.server.port")+") "+oc);
+			gestorFacturas.aceptarPedido(oc);
 		};
 	}
 	

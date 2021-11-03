@@ -23,7 +23,7 @@ public class PedidosConsumer implements Consumer<Pedido>{
 			throw new RuntimeException("Fallo al procesar el pedido");
 		}
 		System.out.println("Pedido recibido: "+pedido);
-		 */
+		*/
 		
 		System.out.println("FALLO!!! ("+pedido+")");
 		throw new RuntimeException("Fallo al procesar el pedido");

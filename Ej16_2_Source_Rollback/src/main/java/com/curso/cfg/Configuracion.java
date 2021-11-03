@@ -19,5 +19,4 @@ public class Configuracion {
 	    return new KafkaTransactionManager<>(pf);
 	}
 	
-	
 }

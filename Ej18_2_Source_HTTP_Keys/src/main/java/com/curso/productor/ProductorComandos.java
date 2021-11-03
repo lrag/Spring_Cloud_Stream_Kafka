@@ -34,7 +34,8 @@ public class ProductorComandos implements Supplier<Message<Comando>>{
 		}
 
 		return MessageBuilder.withPayload(comando)
-			//.setHeader(KafkaHeaders.MESSAGE_KEY, comando.getCliente().getCodigo())
+			.setHeader(KafkaHeaders.MESSAGE_KEY, comando.getCliente().getCodigo())
+			.setHeader("MOVIDA", "GORDÍSIMA")
 			.build();
 	}
 	
