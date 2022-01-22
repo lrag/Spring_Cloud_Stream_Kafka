@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.curso</groupId>
-	<artifactId>Ej11_2_Source</artifactId>
+	<artifactId>Ej14_2_Source_Grupos</artifactId>
 	<version>1.0.0</version>
-	<name>Ej11_Source</name>
+	<name>Ej14_2_Source_Grupos</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

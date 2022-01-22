@@ -8,7 +8,6 @@ public class Comando {
 
 	public Comando() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Comando(Long timestamp, String comando, com.curso.modelo.entidad.Cliente cliente) {

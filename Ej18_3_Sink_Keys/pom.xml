@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.curso</groupId>
-	<artifactId>Ej11_3_Sink</artifactId>
+	<artifactId>Ej18_3_Sink_Keys</artifactId>
 	<version>1.0.0</version>
-	<name>Ej11_Sink</name>
+	<name>Ej18_3_Sink_Keys</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

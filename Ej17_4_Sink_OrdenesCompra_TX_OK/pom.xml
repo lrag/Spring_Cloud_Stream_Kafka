@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.1</version>
+		<version>2.5.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.curso</groupId>
-	<artifactId>Ej11_2_Source</artifactId>
+	<artifactId>Ej17_4_Sink_OrdenesCompra_TX</artifactId>
 	<version>1.0.0</version>
-	<name>Ej15_Source_ACK</name>
+	<name>Ej17_4_Sink_OrdenesCompra_TX</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -20,12 +20,19 @@
 	</properties>
 
 	<dependencies>
+	
+		<!-- 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+		-->
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-stream-binder-kafka</artifactId>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>

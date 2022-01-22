@@ -11,7 +11,7 @@
 	<groupId>com.curso</groupId>
 	<artifactId>Ej11_4_Source_Reactor</artifactId>
 	<version>1.0.0</version>
-	<name>Ej11_Source</name>
+	<name>Ej11_4_Source_Reactor</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

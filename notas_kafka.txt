@@ -2,7 +2,7 @@ Arrancar:
 
 zookeeper-server-start.bat ../../config/zookeeper.properties
 
-kafka-server-start.bat ../../config/server.properties
+kafka-server-start.bat ../../config/server_0.properties
 
 
 Listar brokers:

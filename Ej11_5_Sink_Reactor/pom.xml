@@ -11,7 +11,7 @@
 	<groupId>com.curso</groupId>
 	<artifactId>Ej11_5_Sink_Reactor</artifactId>
 	<version>1.0.0</version>
-	<name>Ej11_Sink</name>
+	<name>Ej11_5_Sink_Reactor</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
