@@ -14,6 +14,7 @@ public class ProductorDetalleConsumo implements Supplier<DetalleConsumo>{
 	private String[] users = { "user60", "user70", "user80", "user90", "user100" };			
 	
 	@Override
+	//Spring cloud stream es el que invoca 'get'
 	public DetalleConsumo get() {
 		try {
 			Thread.sleep(1000);

@@ -18,6 +18,7 @@ public class ProductorPedidos implements Supplier<Pedido>{
 	}
 
 	@Override
+	//Este método es invocado por Spring Cloud Stream
 	public Pedido get() {
 		Pedido pedido = null;
 		try {
